@@ -57,15 +57,8 @@
       second : d.getSeconds(),
       day : '星期'
     };
-    switch (d.getDay()) {
-      case 0: data['day'] += '日'; break;
-      case 1: data['day'] += '一'; break;
-      case 2: data['day'] += '二'; break;
-      case 3: data['day'] += '三'; break;
-      case 4: data['day'] += '四'; break;
-      case 5: data['day'] += '五'; break;
-      case 6: data['day'] += '六'; break;
-    }
+    var dayInfo = ['日','一','二','三','四','五','六'];
+    data['day'] += dayInfo[d.getDay()];
     
     return data;
   }
